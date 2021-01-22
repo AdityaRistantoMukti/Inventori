@@ -34,7 +34,10 @@ Route::group(['prefix' => 'transaksi'], function(){
 });
 
 Route::group(['prefix' => 'suplier'], function(){
-    Route::get('/index', 'Suplier\SuplierController@index')->name('suplier');
-    Route::get('/create', 'Suplier\SuplierController@create')->name('suplier.create');
-    Route::get('/edit', 'Suplier\SuplierController@edit')->name('suplier.edit');
+    Route::get('index', 'Suplier\SuplierController@index')->name('suplier');
+    Route::get('create', 'Suplier\SuplierController@create')->name('suplier.create');
+    Route::get('edit/{suplier}', 'Suplier\SuplierController@edit')->name('suplier.edit');
+    Route::patch('update/{suplier}','Suplier\SuplierController@update')->name('suplier.update');
+    Route::post('store', 'Suplier\SuplierController@store')->name('suplier.store');
+    Route::delete('delete/{suplier}','Suplier\SuplierController@destroy')->name('suplier.delete');
 });
