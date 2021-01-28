@@ -29,7 +29,7 @@ class SuplierController extends Controller
     public function store(Request $request)
     {
         $suplier = Suplier::create([
-            'name'=>$request->name,
+            'nama'=>$request->nama,
             'alamat'=>$request->alamat,
             'email'=>$request->email,
             'phone'=>$request->phone
@@ -44,7 +44,7 @@ class SuplierController extends Controller
     {
         $suplier = Suplier::where('id', $id)->first();
 
-        $suplier->name = $request->input('name');
+        $suplier->nama = $request->input('nama');
         $suplier->alamat = $request->input('alamat');
         $suplier->email = $request->input('email');
         $suplier->phone = $request->input('phone');
@@ -62,6 +62,6 @@ class SuplierController extends Controller
         $suplier->delete();
 
         flash()->success('Suplier berhasil di hapus');
-        return redirect()->back();
+        return redirect()->back(); 
     }
 }

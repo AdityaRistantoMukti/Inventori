@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Barang;
+use App\Suplier;
 
 class BarangController extends Controller
 {
@@ -13,7 +15,9 @@ class BarangController extends Controller
      */
     public function index()
     {
-        return view('masterbarang.index');
+        $barangs = \App\Barang::all();
+
+        return view('masterbarang.index', compact('barangs'));
     }
 
     /**

@@ -6,27 +6,29 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <form action="" method="post">
+                        <form action="{{route('master-barang.update', $barang->id)}}" method="post">
+                            @csrf
+                            @method('PATCH')
                             <div class="form-group">
                                 <label for="kode_barang"> Kode Barang</label>
-                                <input type="text" name="kode_barang" id="kode_barang" class="form-control">
+                                <input type="text" name="kode_barang" id="kode_barang" class="form-control" value="{{$barang->kode_barang}}">
                             </div>
                             <div class="form-group">
-                                <label for="kode_barang"> Nama Barang</label>
-                                <input type="text" name="nama_barang" id="nama_barang" class="form-control">
+                                <label for="nama_barang"> Nama Barang</label>
+                                <input type="text" name="nama_barang" id="nama_barang" class="form-control" value="{{$barang->nama_barang}}">
                             </div>
                             <div class="form-group">
-                                <label for="kode_barang"> Supplier</label>
-                                <select name="" id="" class="form-control">
-                                    <option value="">- pilih supplier -</option>
-                                    <option value="1"> PT Kharisma </option>
-                                    <option value="2"> PT Asus </option>
-
+                                <label for="suplier_id">Nama Suplier</label>
+                                <select name="suplier_id" id="suplier_id" class="form-control">
+                                    <option value="">- pilih suplier -</option>
+                                    @foreach ($supliers as $suplier)
+                                        <option value="{{$suplier->id}}">{{$suplier->nama}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="kode_barang"> Quantity</label>
-                                <input type="text" name="quantity" id="quantity" class="form-control">
+                                <label for="quantity"> Quantity</label>
+                                <input type="number" name="quantity" id="quantity" class="form-control" value="{{$barang->quantity}}">
                             </div>
                             <div>
                                 <button class="btn btn-outline-info btn-block">Simpan</button>

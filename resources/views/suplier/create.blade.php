@@ -10,8 +10,8 @@
                         @csrf
 
                             <div class="form-group">
-                                <label for="nama_suplier">Nama Suplier</label>
-                                <input type="text" name="name" id="name" class="form-control">
+                                <label for="nama">Nama Suplier</label>
+                                <input type="text" name="nama" id="nama" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="alamat">Alamat</label>

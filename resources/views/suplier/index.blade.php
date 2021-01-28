@@ -30,7 +30,7 @@
                     
                         @foreach($supliers as $suplier)
                         <tr>
-                            <td>{{$suplier->name}}</td>
+                            <td>{{$suplier->nama}}</td>
                             <td>{{$suplier->alamat}}</td>
                             <td>{{$suplier->email}}</td>
                             <td>{{$suplier->phone}}</td>

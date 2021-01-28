@@ -6,25 +6,25 @@
             <div class="col-md-6">
                 <div class="card border-0 shadow">
                     <div class="card-body">
-                        <h4>PT XIAUXONG</h4>
-                        <p>Memberikan suplie barang dengan keterangan</p>
+                        <h4></h4>
+                        <p></p>
                         <table class="table table-stripped">
                             <tbody>
                                 <tr>
                                     <td>Kode Barang</td>
-                                    <td>NMA-213-434-213</td>
+                                    <td>{{$barang->kode_barang}}</td>
                                 </tr>
                                 <tr>
                                     <td>Nama Barang</td>
-                                    <td>Charger</td>
+                                    <td>{{$barang->nama_barang}}</td>
                                 </tr>
                                 <tr>
                                     <td>Quantity</td>
-                                    <td>10 unit</td>
+                                    <td>{{$barang->quantity}}</td>
                                 </tr>
                                 <tr>
                                     <td>Tanggal</td>
-                                    <td>1 Januari 2021</td>
+                                    <td>{{$barang->created_at}}</td>
                                 </tr>
                             </tbody>
                         </table>
