@@ -15,7 +15,7 @@ class MasterBarangController extends Controller
 
         return view('masterbarang.index', compact('barangs'));
     }
-    
+
     public function create()
     {
         $supliers = Suplier::all();
@@ -33,7 +33,7 @@ class MasterBarangController extends Controller
         ]);
 
         flash()->success('Data barang berhasil ditambahkan');
-        return redirect(route('master-barang'));
+        return redirect()->back();
     }
     public function edit($id)
     {
@@ -59,6 +59,7 @@ class MasterBarangController extends Controller
     public function show($id)
     {
         $barang = Barang::findOrFail($id);
+
 
         return view('masterbarang.detail', compact('barang'));
     }

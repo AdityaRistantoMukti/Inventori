@@ -11,11 +11,26 @@
                     
                     <a href="{{route('master-barang.formulir-barang')}}" class="btn btn-info mr-2">Tambah Data Barang Baru</a>
                 </div>
-                <div class="d-flex">
-                    <input type="date" name="" id="" class="form-control mr-2">
-                    <button type="submit" class="btn btn-info primary mb-2">Cari Data</button>
-                </div>
+            
+                <form action="{{route('laporan.periode.barang')}}" method="GET">
+                    <div class="row">
+                       <div class="col-md-4">
+                           <div class="form-group">
+                                <input type="date" name="tgl_awal" class="form-control" id="tgl_awal">
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="form-group">
+                              <input type="date" name="tgl_akhir" class="form-control" id="tgl_akhir">
+                         </div>
+                     </div>
+                     <div>
+                       <button class="btn btn-info"> Cari data </button>
+                     </div>
+                    </div>                 
+                </form>
             </div>
+
                 <table class="table table-stripped">
                     <thead>
                         <tr>

@@ -16,23 +16,23 @@
                 <table class="table table-stripped">
                     <thead>
                         <tr>
-                            <th>No</th>
-                            <th>Kode Barang</th>
+                            <th>Kode Transaksi</th>
                             <th>Nama Supplier</th>
                             <th>Nama Barang</th>
-                            <th>Quantiy</th>
                             <th>Tgl Transaksi</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($transactions as $transaction)
+                            
+                        
                         <tr>
-                            <td>1</td>
-                            <td>NMA-213-434-213</td>
-                            <td>PT XIAUXONG</td>
-                            <td>Charger</td>
-                            <td>10</td>
-                            <td> 1 Januari 2021</td>
+                            <td>{{$transaction->kode_transaksi }}</td>
+                            <td>{{$transaction->suplier->nama}}</td>
+                            <td>{{$transaction->barang->nama_barang}}</td>
+                            <td>{{$transaction->created_at->toDateString()}}</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
                 </div>
