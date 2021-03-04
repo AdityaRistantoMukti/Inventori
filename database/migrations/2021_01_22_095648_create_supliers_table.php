@@ -17,6 +17,7 @@ class CreateSupliersTable extends Migration
             $table->increments('id');
             $table->string('nama');
             $table->string('alamat');
+            $table->string('kode_suplier');
             $table->string('email')->unique();
             $table->string('phone');
             $table->timestamps();

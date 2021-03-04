@@ -32,6 +32,7 @@
                 <table class="table table-stripped">
                     <thead>
                         <tr>
+                            <th>Kode Suplier</th>
                             <th>Nama Supplier</th>
                             <th>Alamat</th>
                             <th>Email</th>
@@ -43,6 +44,7 @@
                     
                         @foreach($supliers as $suplier)
                         <tr>
+                            <td>{{$suplier->kode_suplier}}</td>
                             <td>{{$suplier->nama}}</td>
                             <td>{{$suplier->alamat}}</td>
                             <td>{{$suplier->email}}</td>

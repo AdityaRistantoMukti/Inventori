@@ -26,6 +26,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>Kode Suplier |</th>
                         <th>Nama Suplier |</th>
                         <th>Alamat |</th>
                         <th>Email |</th>
@@ -36,6 +37,7 @@
                 <tbody>
                     @forelse ($barang as $get)
                         <tr>
+                            <td>{{$get->suplier->kode_suplier}}</td>
                             <td>{{$get->suplier->nama}} |</td>
                             <td>{{$get->suplier->alamat}} </td>
                             <td>{{$get->suplier->email}} </td>
