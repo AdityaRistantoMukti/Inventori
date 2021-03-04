@@ -24,7 +24,7 @@
     
 
        @include('partials.nav')
-        <main class="py-4">
+        <main class="py-4 mt-5">
             @include('flash::message')
             @include('layouts._errors')
             @yield('content')

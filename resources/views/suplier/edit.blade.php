@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
@@ -9,7 +9,7 @@
                         <form action="{{ route('suplier.update', $suplier->id) }}" method="post">
                             @csrf
                                 @method('PATCH')
-
+                            
                             <div class="form-group">
                                 <label for="nama">Nama Suplier</label>
                                 <input type="text" name="nama" id="nama" value="{{$suplier->nama}}" class="form-control">

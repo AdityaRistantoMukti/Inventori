@@ -10,6 +10,10 @@ use App\Transaction;
 
 class TransaksiController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *

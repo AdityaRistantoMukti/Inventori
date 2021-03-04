@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+<nav class="navbar navbar-expand-md fixed-top navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -9,17 +9,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <li>
-                        <a class="nav-link" href="{{ route('master-barang') }}">Master Barang</a>
-                        </li>
-                        <li>
-                        <a class="nav-link" href="{{ route('transaksi')}}">Data Transaksi</a>
-                        </li>
-                        <li>
-                        <a class="nav-link" href="{{route('suplier') }}">Data Supplier</a>
-                        </li>
-                    </ul>
+                   
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -33,7 +23,20 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+
                         @else
+                        <ul class="navbar-nav mr-auto">
+                            <li>
+                            <a class="nav-link" href="{{ route('master-barang') }}">Master Barang</a>
+                            </li>
+                            <li>
+                            <a class="nav-link" href="{{ route('transaksi')}}">Data Transaksi</a>
+                            </li>
+                            <li>
+                            <a class="nav-link" href="{{route('suplier') }}">Data Supplier</a>
+                            </li>
+                        </ul>
+                       
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

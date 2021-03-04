@@ -1,14 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
                         <form action="{{ route('suplier.store') }}" method="post">
                         @csrf
-
                             <div class="form-group">
                                 <label for="nama">Nama Suplier</label>
                                 <input type="text" name="nama" id="nama" class="form-control">
@@ -27,8 +26,9 @@
                             </div>
                             <div>
                                 <button class="btn btn-outline-info btn-block">Simpan</button>
-                            </div>
+                            </div> 
                         </form>
+                       
                     </div>
                 </div>
             </div>

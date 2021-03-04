@@ -6,7 +6,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{route('transaksi.store')}}" method="post">
+                        <form action="{{route('transaksi.barangmasuk')}}" method="post">
                             @csrf
                             <div class="form-group">
                                 <label for="barang_id"> Nama Barang</label>

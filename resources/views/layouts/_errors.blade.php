@@ -1,7 +1,7 @@
 @if(count($errors))
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    @foreach ($erros->all() as $erorr)
+    @foreach ($errors->all() as $erorr)
 
     <strong>{{ $erorr }}</strong>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">

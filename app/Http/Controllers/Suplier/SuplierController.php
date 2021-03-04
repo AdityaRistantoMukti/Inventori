@@ -8,6 +8,10 @@ use App\Suplier;
 
 class SuplierController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
     public function index()
     {
         $supliers = Suplier::all();
@@ -23,16 +27,16 @@ class SuplierController extends Controller
     public function edit($id)
     {
         $suplier = Suplier::findOrFail($id);
-        return view('suplier.edit',compact('suplier'));
+        return view('suplier.edit', compact('suplier'));
     }
 
     public function store(Request $request)
     {
         $suplier = Suplier::create([
-            'nama'=>$request->nama,
-            'alamat'=>$request->alamat,
-            'email'=>$request->email,
-            'phone'=>$request->phone
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'email' => $request->email,
+            'phone' => $request->phone
         ]);
 
         flash()->success('Data Suplier berhasil di buat');
@@ -40,7 +44,7 @@ class SuplierController extends Controller
         return redirect()->back();
     }
 
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $suplier = Suplier::where('id', $id)->first();
 
@@ -62,6 +66,6 @@ class SuplierController extends Controller
         $suplier->delete();
 
         flash()->success('Suplier berhasil di hapus');
-        return redirect()->back(); 
+        return redirect()->back();
     }
 }

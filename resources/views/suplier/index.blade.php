@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-5">
     <div class="row">
         <div class="col-md-12">
         <div class="card border-0 shadow">
@@ -11,7 +11,7 @@
                     
                     <a href="{{ route('suplier.create')}}" class="btn btn-info mr-2">Tambah Data Barang Baru</a>
                 </div>
-                <form action="{{route('laporan.periode.barang')}}" method="GET">
+                <form action="{{route('laporan.periode.suplier')}}" method="GET">
                     <div class="row">
                        <div class="col-md-4">
                            <div class="form-group">
@@ -53,8 +53,8 @@
                             @csrf
                             
                             @method('DELETE')
-                            <a href="{{ route('suplier.edit', $suplier->id) }}" class="btn btn-outline-warning" btn-sm>Edit</a>
-                            <button class="btn btn-outline-danger" btn-sm>Delete</button>
+                            <a href="{{ route('suplier.edit', $suplier->id) }}" class="btn btn-outline-warning btn-sm">Edit</a>
+                            <button class="btn btn-outline-danger btn-sm">Delete</button>
                             </form>
 
                             </td>
